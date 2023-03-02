@@ -1,0 +1,933 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./font/Gilroy-Regular.eot');
+    src: url('./font/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./font/Gilroy-Regular.woff') format('woff'),
+    url('./font/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.page_office {
+    max-width: 1440px;
+    width: 100%;
+    background-color: #eef1f7;   
+    margin-left: auto;
+    margin-right: auto;  
+    background-image: url(./Vector.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-right: 20px;
+}
+
+.office {
+    max-width: 1270px;
+    margin-left: 68px;  
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 37px;
+}
+
+.nav {
+    display: flex;
+}
+
+.log_out {
+    margin-right: 8px;
+}
+
+.button_nav button {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    height: 40px;
+    margin-left: 20px;
+    background: none;
+    border: none;
+    border-radius: 40px;
+    color: #1F6AE5;
+    border: solid 2px #1F6AE5;
+    cursor: pointer;
+    padding-left: 10%;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.button_nav button:hover {
+    background-color: rgb(31, 106, 229, 0.8);
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.button_widht button {
+    width: 170px;
+}
+
+.button_token button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+    margin-left: 20px;
+    background: #1F6AE5;
+    border: none;
+    border-radius: 40px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.button_token button:hover {
+    background-color: rgb(31, 106, 229, 0.8);
+    transition: all 0.5s ease;
+}
+
+.pluse_token {
+    margin-right: 8px;
+}
+
+.trading {
+    display: flex;
+    margin-left: 34px;
+}
+
+.trading_name {
+    margin: 90px 0 0 34px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+    color: #2B3248;
+}
+
+.trading_form {
+    max-width: 795px;
+    width: 100%;
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    border-top: 2px solid #83AEF4;
+    box-shadow: 0px 20px 50px rgba(54, 56, 83, 0.09);
+    backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.trading_form_content {
+    max-width: 735px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 0 0 16px 20px;
+}
+
+.non_active_input {
+    background: #EBEEF0;
+}
+
+.non_active_input input {
+    background: #EBEEF0;
+}
+
+
+.name_balance {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #888889;
+}
+
+.balance_redact {
+    margin-right: 68px;
+}
+
+.trading_form_input_button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.trading_form_button {
+    display: flex;
+}
+
+.input_trading {
+    width: 90%;
+    border: none;
+    background: #FFFFFF;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 24px;
+}
+
+.button_max {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #888889;
+    border-radius: 30px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #888889;
+}
+
+.button_max:hover {
+    background-color: #1F6AE5;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+/* Выпадающее меню валют */
+
+.value_menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 97px;
+    height: 30px;
+    margin-right: 30px;
+    border: 1px solid #888889;
+    border-radius: 8px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #888889;
+}
+
+.img_usdt {
+    margin: 0 6px 0 6px;
+}
+
+.polygon {
+    padding: 0 6px 0 20px;
+}
+
+.value_menu:hover {
+    background-color: #1F6AE5;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.currency_menu {
+    display: none;
+    position: absolute;
+    width: 165px;
+    height: 156px;
+    background: #FFFFFF;
+    box-shadow: 8px 12px 24px rgba(93, 106, 131, 0.1);
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.main_currency_menu:hover .currency_menu {
+    display: block;
+}
+
+.currencys {
+    display: flex;
+    align-items: center;
+    max-width: 141px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #718096;
+}
+
+.img_currency {
+    margin: 0 12px 0 8px;
+}
+
+.currencys:hover {
+    background: #EEF4FC;
+    transition: all 0.3s ease;
+}
+
+/* Конец выпадающего меню */
+
+.hwx_token {
+    display: flex;
+    align-items: center;
+    width: 155px;
+    height: 28px;
+    margin-right: 78px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #888889;
+}
+
+.hwx_token img {
+    margin-right: 10px;
+}
+
+.trading_form_text {
+    max-width: 735px;
+    width: 100%;
+    padding: 20px;
+    margin: 30px auto;
+    border: 1.5px solid #C6D5EA;
+    border-radius: 12px;
+}
+
+.trading_form_text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form_text_bold {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 24px;
+    color: #2B3248;
+}
+
+.form_text_lite {
+    margin-top: 18px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #888889;
+}
+
+.action_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 735px;
+    margin: 30px auto;
+}
+
+.agree {
+    display: flex;
+    padding-left: 15px;
+}
+
+.agree p {
+    margin-left: 10px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #888889;
+}
+
+.agree_text {
+    color: #2B3248;
+    border-bottom: solid 1px #2B3248;
+}
+
+.agree input {
+    width: 18px;
+    height: 18px;
+}
+
+.action_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 270px;
+    width: 100%;
+    height: 60px;
+    border: 1.5px solid #9CB7E3;
+    border-radius: 10px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #9CB7E3;
+}
+
+.action_button:hover {
+    border: 1.5px solid #1F6AE5;
+    color: #1F6AE5;
+    transition: all 0.5s ease;
+}
+
+/* trading_round */
+
+.trading_round {
+    max-width: 417px;
+    width: 100%;
+    margin: 40px 0 0 24px;
+    background: rgba(255, 255, 255, 0.5);
+    border-top: 2px solid #83AEF4;
+    box-shadow: 0px 20px 50px rgba(54, 56, 83, 0.09);
+    backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+}
+
+.round_content {
+    max-width: 357px;
+    height: 532px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+.round_name {
+    display: flex;
+    margin-top: 24px;
+}
+
+.round_lite_text {
+    margin-right: 16px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #888889;
+}
+
+.round_bold_text {
+    margin-left: 16px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2B3248;
+}
+
+.round_name img {
+    object-fit: contain;
+}
+
+.round_page {
+    display: flex;
+    margin-top: 16px;
+}
+
+.round_page_number  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin-right: 20px;
+    padding: 7px 18px;
+    border: 1px solid #83AEF4;
+    border-radius: 30px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 16px;
+    color: #2B3248;
+}
+
+.round_page_number:hover {
+    background-color: #1F6AE5;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.margin_name {
+    margin-top: 38px;
+}
+
+.total_balance_input {
+    display: flex;
+    border-bottom: solid 1px #C6D5EA; 
+}
+
+.total_balance_input_redact {
+    width: 100%;
+    border: none;
+    background: none;   
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 24px;
+    color: #2B3248;
+}
+
+
+
+.address  {
+    width: 100%;
+    height: 90px;
+    margin-top: 18px;
+}
+
+.address p {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.adress_button {
+    margin-top: 16px;
+}
+
+.button_claim {
+    margin: 0;
+}
+
+.adress_button a {
+    width: 100px;
+    height: 30px;
+    margin-right: 16px;
+    padding: 5px 11px;
+    background: #D9E8FF;
+    border-radius: 30px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 10px;
+    color: #3A85F4;
+}
+
+.adress_button a:hover {
+    color: rgb(58, 133, 244, 0.7);
+    transition: all 0.5s ease;
+}
+
+
+
+/* payment */
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.payment_box {
+    margin-top: 16px;
+    padding: 10px;
+}
+
+.one {
+    max-width: 417px;
+    width: 100%;
+    margin-top: 24px;
+    background: #E74242;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.09);
+    border-radius: 20px;
+}
+
+.box_content {
+    max-width: 357px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+.usdt_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usdt_between p {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.line_one {
+    margin-top: 14px;
+    border: 1px solid #EB7878;
+}
+
+.one_description {
+    margin-top: 12px;
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.two {
+    max-width: 417px;
+    width: 100%;
+    margin-top: 16px;
+    background: #47C596;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.09);
+    border-radius: 17px;
+}
+
+.usdt_two_img {
+    display: flex;
+}
+
+.two_lite_text {
+    margin-right: 6px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ACEAD1;
+}
+
+.button_two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 357px;
+    height: 46px;
+    margin-top: 16px;
+    background: #50D6A4;
+    border-radius: 8px;
+}
+
+.button_two a {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.button_two:hover {
+    background: rgb(80, 214, 164, 0.6);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.three {
+    max-width: 417px;
+    width: 100%;
+    margin-top: 16px;
+    background: #B3C3D1;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.09);
+    border-radius: 12px;
+}
+
+.three_lite_text {
+    margin-right: 6px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #DCE6F4;
+}
+
+.four {
+    max-width: 417px;
+    width: 100%;
+    margin-top: 16px;
+    background: #FEB548;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.09);
+    border-radius: 20px;
+}
+
+.line_last {
+    margin-top: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.31);
+}
+
+.fives {
+    max-width: 417px;
+    width: 100%;
+    margin-top: 16px;
+    background: #FEB548;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.09);
+    border-radius: 20px;
+}
+
+/* footer */
+
+footer {
+    display: block;
+    margin: 250px 0 0 0px;
+}
+
+.footer_up {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.logo_button {
+    display: flex;
+}
+
+.footer_button {
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+}
+
+.main_website a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    border: 1px solid rgba(40, 82, 190, 0.3);
+    border-radius: 80px;
+    padding: 12px 12px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    color: #2852BE;
+}
+
+.main_website img {
+    margin-right: 12px;
+}
+
+.main_website a:hover {
+    background-color: rgb(31, 106, 229, 0.8);
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.hawex_payments a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    border: 1px solid rgba(40, 82, 190, 0.3);
+    border-radius: 80px;
+    padding: 12px 12px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba(54, 56, 83, 0.65);
+    margin-left: 12px;
+}
+
+.hawex_payments a img {
+    margin-right: 12px;
+}
+
+.hawex_payments a:hover {
+    background-color: rgb(31, 106, 229, 0.8);
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer_social {
+    display: flex;
+}
+
+.social_content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.social_text {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size:15px;
+    line-height: 140%;
+    color: #494949;
+}
+
+.footer_line {
+    width: 98%;
+    margin-top: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer_down_text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.copyright p {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 13px;
+    color: #B1B1B1;
+    margin-bottom: 30px;
+}
+
+.footer_info {
+    display: flex;
+}
+
+.footer_info p {
+    margin-right: 32px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 13px;
+    color: #363853;
+}
+
+.footer_info p:hover {
+    color: rgb(54, 56, 83, 0.6);
+    transition: all 0.5s ease;
+}
+
+
+
+/* Media */
+
+@media (max-width: 1290px) {
+    .trading {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trading_round {
+        margin: 50px 0 0 0;
+    }
+
+    .payment {
+        align-items: center;
+        margin: 50px 0 0 0;
+    }
+}
+
+@media (max-width: 840px) {
+    .office {
+        margin: 0;
+        padding: 0 15px 0 10px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        margin-top: 20px;
+    }
+
+    .action_form { 
+        flex-direction: column-reverse;
+    }
+
+    .agree {
+        padding: 10px 0 20px 0;
+    }
+}
+
+@media (max-width: 670px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button_nav, .button_token, .button_nav {
+        margin-top: 20px;
+    }
+
+    .form_text_bold {
+        font-size: 18px;
+    }
+
+    .form_text_lite {
+        font-size: 14px;
+    }
+
+    .trading_form_text {
+        padding: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .agree p {
+        font-size: 12px;
+    }
+
+    .form_text_bold {
+        font-size: 15px;
+    }
+
+    .form_text_lite {
+        font-size: 11px;
+    }
+
+    .address p {
+       font-size: 18px; 
+    }
+
+    .form_text_lite {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    .input_trading {
+        font-size: 18px;
+    }
+
+    .button_max {
+        max-width: 40px;
+    }
+
+    .value_menu {
+        max-width: 80px;
+    }
+
+    .polygon {
+        padding: 0 6px 0 5px;
+    }
+
+    .balance_redact {
+        margin-right: 20px;
+    }
+
+    .round_content input {
+        font-size: 21px;
+    }
+
+    .form_text_bold {
+        font-size: 12px;
+    }
+
+    .form_text_lite {
+        font-size: 9px;
+    } 
+}
